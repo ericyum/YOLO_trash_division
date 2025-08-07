@@ -67,7 +67,11 @@ Roboflow의 `페트병` 데이터셋과 `비닐` 데이터 셋, 그리고 AI Hub
 ### 비닐(Vinyl) 클래스 학습
 두 개의 Roboflow 비닐 데이터셋을 활용하여 비닐 클래스를 학습했습니다.
 
-**10 Epochs 학습 결과:**
+google-cli를 사용한 데이터 증강  
+![Pasted image 20250806113510.png](images/Pasted%20image%2020250806113510.png) 
+![Pasted image 20250806113619.png](images/Pasted%20image%2020250806113619.png) 
+  
+**10 Epochs 학습 결과:**  
 (train)  
 ![Pasted image 20250806113510.png](images/Pasted%20image%2020250806113510.png) 
 (valid)  
