@@ -20,7 +20,7 @@ Roboflow의 `페트병` 데이터셋과 `비닐` 데이터 셋, 그리고 AI Hub
 (train)
 ![Pasted image 20250804134257.png](images/Pasted%20image%2020250804134257.png)
 (valid)
-![Pasted image 20250804141139.png](images/Pasted%20image%20250804141139.png)
+![Pasted image 20250804141139.png](images/Pasted%20image%2020250804141139.png)
 초기 학습 결과, `plastic` 클래스는 mAP50 0.983으로 높은 정확도를 보였으나, `plastic_labels` 클래스는 mAP50 0.583으로 낮은 정확도를 보였습니다. 이는 `plastic_labels`의 좌표값이 부정확하게 찍혀있었기 때문으로 확인되었습니다.
 
 ### 좌표 수정 및 재학습
