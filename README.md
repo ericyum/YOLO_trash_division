@@ -25,9 +25,9 @@ Roboflow의 `페트병` 데이터셋과 `비닐` 데이터 셋, 그리고 AI Hub
 
 ### 좌표 수정 및 재학습
 `plastic_labels`의 부정확한 좌표값을 수정한 후 10 Epochs 재학습을 진행했습니다.
-- **수정 전:**
+- **수정 전:**  
 ![Pasted image 20250804141722.png](images/Pasted%20image%2020250804141722.png)
-- **수정 후:**
+- **수정 후:**  
 ![Pasted image 20250804144050.png](images/Pasted%20image%2020250804144050.png)
 
 **재학습 결과 (10 Epochs):**  
