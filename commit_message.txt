@@ -1,0 +1,1 @@
+Initial commit of trash classification Flask app and README
