@@ -83,8 +83,8 @@ google-cli를 사용한 데이터 증강
 (loss/mAP50 graph)  
 ![Pasted image 20250806134506.png](images/Pasted%20image%2020250806134506.png) 
 `val/box_loss`와 `val/cls_loss`가 여전히 감소 추세를 보여 더 많은 Epochs가 필요함을 시사했습니다.  
-
-**100 Epochs 학습 결과:**
+  
+**100 Epochs 학습 결과:**  
 (train)  
 ![Pasted image 20250806144103.png](images/Pasted%20image%2020250806144103.png) 
 (valid)  
@@ -96,7 +96,7 @@ google-cli를 사용한 데이터 증강
 ### 통합 학습 (플라스틱 + 비닐)
 플라스틱과 비닐 클래스를 통합하여 학습을 진행했습니다. 플라스틱 클래스에 미치는 영향은 미미했습니다.
 
-**10 Epochs 학습 결과:**
+**10 Epochs 학습 결과:**  
 (train)  
 ![Pasted image 20250806155406.png](images/Pasted%20image%2020250806155406.png) 
 (valid)  
@@ -104,7 +104,7 @@ google-cli를 사용한 데이터 증강
 (loss/mAP50 graph)  
 ![Pasted image 20250806155655.png](images/Pasted%20image%2020250806155655.png) 
 
-**100 Epochs 학습 결과:**
+**100 Epochs 학습 결과:**  
 (train)  
 ![Pasted image 20250806173126.png](images/Pasted%20image%2020250806173126.png) 
 (valid)  
@@ -115,7 +115,7 @@ google-cli를 사용한 데이터 증강
 ### 통합 학습 (플라스틱 + 비닐 + 유리병)
 AI Hub의 유리병 데이터셋을 추가하여 학습했습니다.
 
-**10 Epochs 학습 결과:**
+**10 Epochs 학습 결과:**  
 (train)  
 ![Pasted image 20250807091922.png](images/Pasted%20image%2020250807091922.png) 
 (valid)  
@@ -124,7 +124,7 @@ AI Hub의 유리병 데이터셋을 추가하여 학습했습니다.
 ![Pasted image 20250807093050.png](images/Pasted%20image%2020250807093050.png) 
 정확도가 99%에서 91%로 하락했습니다. 이는 유리병과 다른 클래스 간의 구별이 어렵기 때문으로 보이며, 유리병 데이터셋의 보강이 필요합니다.
 
-**100 Epochs 학습 결과:**
+**100 Epochs 학습 결과:**  
 (train)  
 ![Pasted image 20250807111825.png](images/Pasted%20image%2020250807111825.png) 
 (valid)  
