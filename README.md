@@ -18,23 +18,23 @@ Roboflow의 `페트병` 데이터셋과 `비닐` 데이터 셋, 그리고 AI Hub
 
 ### 1차 학습 (10 Epochs)  
 (train)
-![Pasted image 20250804134257.png](images/Pasted%20image%2020250804134257.png)
+![Pasted image 20250804134257.png](images/Pasted%20image%2020250804134257.png)  
 (valid)
-![Pasted image 20250804141139.png](images/Pasted%20image%2020250804141139.png)
+![Pasted image 20250804141139.png](images/Pasted%20image%2020250804141139.png)  
 초기 학습 결과, `plastic` 클래스는 mAP50 0.983으로 높은 정확도를 보였으나, `plastic_labels` 클래스는 mAP50 0.583으로 낮은 정확도를 보였습니다. 이는 `plastic_labels`의 좌표값이 부정확하게 찍혀있었기 때문으로 확인되었습니다.
 
 ### 좌표 수정 및 재학습
 `plastic_labels`의 부정확한 좌표값을 수정한 후 10 Epochs 재학습을 진행했습니다.
 - **수정 전:**  
-![Pasted image 20250804141722.png](images/Pasted%20image%2020250804141722.png)
+![Pasted image 20250804141722.png](images/Pasted%20image%2020250804141722.png)  
 - **수정 후:**  
-![Pasted image 20250804144050.png](images/Pasted%20image%2020250804144050.png)
+![Pasted image 20250804144050.png](images/Pasted%20image%2020250804144050.png)  
 
 **재학습 결과 (10 Epochs):**  
 (train)
 ![Pasted image 20250805102045.png](images/Pasted%20image%2020250805102045.png)  
 (valid)
-![Pasted image 20250805102109.png](images/Pasted%20image%2020250805102109.png)
+![Pasted image 20250805102109.png](images/Pasted%20image%2020250805102109.png)  
 정확도가 99%로 크게 향상되었습니다.
 
 ### 클래스 증강 및 추가 학습
@@ -42,9 +42,9 @@ Roboflow의 `페트병` 데이터셋과 `비닐` 데이터 셋, 그리고 AI Hub
 
 **증강 후 학습 결과 (10 Epochs):**  
 (train)
-![Pasted image 20250805114902.png](images/Pasted%20image%2020250805114902.png) 
+![Pasted image 20250805114902.png](images/Pasted%20image%2020250805114902.png)   
 (valid)
-![Pasted image 20250805114915.png](images/Pasted%20image%2020250805114915.png) 
+![Pasted image 20250805114915.png](images/Pasted%20image%2020250805114915.png)  
 `plastic_foreign_substance` 클래스의 정확도가 여전히 낮게 나타났습니다. 이는 이물질의 종류가 다양하여 더 많은 종류의 이물질 이미지를 학습해야 함을 시사합니다.
 
 ### 추가 데이터 수집 및 100 Epochs 학습
@@ -52,11 +52,11 @@ Roboflow의 `페트병` 데이터셋과 `비닐` 데이터 셋, 그리고 AI Hub
 
 **100 Epochs 학습 결과:**  
 (train)
-![Pasted image 20250805124854.png](images/Pasted%20image%2020250805124854.png) 
+![Pasted image 20250805124854.png](images/Pasted%20image%2020250805124854.png)  
 (valid)
-![Pasted image 20250805124917.png](images/Pasted%20image%2020250805124917.png) 
+![Pasted image 20250805124917.png](images/Pasted%20image%2020250805124917.png)  
 (loss/mAP50 graph)
-![Pasted image 20250806145331.png](images/Pasted%20image%2020250806145331.png) 
+![Pasted image 20250806145331.png](images/Pasted%20image%2020250806145331.png)  
 
 `plastic_foreign_substance` 클래스의 정확도가 향상되었습니다. 이는 다음과 같은 이유로 분석됩니다:
 
@@ -72,25 +72,25 @@ google-cli를 사용한 데이터 증강
 ![Pasted image 20250806113619.png](images/Pasted%20image%2020250806113619.png)  
 
 증강 결과  
-![Pasted image 2020250806133237.png](images/Pasted%20image%2020250806133237.png) 
-![Pasted image 2020250806133249.png](images/Pasted%20image%2020250806133249.png) 
+![Pasted image 2020250806133237.png](images/Pasted%20image%2020250806133237.png)  
+![Pasted image 2020250806133249.png](images/Pasted%20image%2020250806133249.png)  
   
 **10 Epochs 학습 결과:**  
 (train)  
-![Pasted image 20250804180749.png](images/Pasted%20image%2020250804180749.png) 
+![Pasted image 20250804180749.png](images/Pasted%20image%2020250804180749.png)  
 (valid)  
-![Pasted image 20250806134948.png](images/Pasted%20image%2020250806134948.png) 
+![Pasted image 20250806134948.png](images/Pasted%20image%2020250806134948.png)  
 (loss/mAP50 graph)  
-![Pasted image 20250806134506.png](images/Pasted%20image%2020250806134506.png) 
+![Pasted image 20250806134506.png](images/Pasted%20image%2020250806134506.png)  
 `val/box_loss`와 `val/cls_loss`가 여전히 감소 추세를 보여 더 많은 Epochs가 필요함을 시사했습니다.  
   
 **100 Epochs 학습 결과:**  
 (train)  
-![Pasted image 20250806144103.png](images/Pasted%20image%2020250806144103.png) 
+![Pasted image 20250806144103.png](images/Pasted%20image%2020250806144103.png)  
 (valid)  
-![Pasted image 20250806144115.png](images/Pasted%20image%2020250806144115.png) 
+![Pasted image 20250806144115.png](images/Pasted%20image%2020250806144115.png)  
 (loss/mAP50 graph)  
-![Pasted image 20250806144029.png](images/Pasted%20image%2020250806144029.png) 
+![Pasted image 20250806144029.png](images/Pasted%20image%2020250806144029.png)  
 여전히 개선의 여지가 있었으며, 이는 학습 횟수보다는 데이터셋의 양과 다양성 문제로 판단됩니다.
 
 ### 통합 학습 (플라스틱 + 비닐)
@@ -98,39 +98,39 @@ google-cli를 사용한 데이터 증강
 
 **10 Epochs 학습 결과:**  
 (train)  
-![Pasted image 20250806155406.png](images/Pasted%20image%2020250806155406.png) 
+![Pasted image 20250806155406.png](images/Pasted%20image%2020250806155406.png)  
 (valid)  
-![Pasted image 20250806155629.png](images/Pasted%20image%2020250806155629.png) 
+![Pasted image 20250806155629.png](images/Pasted%20image%2020250806155629.png)  
 (loss/mAP50 graph)  
-![Pasted image 20250806155655.png](images/Pasted%20image%2020250806155655.png) 
+![Pasted image 20250806155655.png](images/Pasted%20image%2020250806155655.png)  
 
 **100 Epochs 학습 결과:**  
 (train)  
-![Pasted image 20250806173126.png](images/Pasted%20image%2020250806173126.png) 
+![Pasted image 20250806173126.png](images/Pasted%20image%2020250806173126.png)  
 (valid)  
-![Pasted image 20250806173137.png](images/Pasted%20image%2020250806173137.png) 
+![Pasted image 20250806173137.png](images/Pasted%20image%2020250806173137.png)  
 (loss/mAP50 graph)  
-![Pasted image 20250806173202.png](images/Pasted%20image%2020250806173202.png) 
+![Pasted image 20250806173202.png](images/Pasted%20image%2020250806173202.png)  
 
 ### 통합 학습 (플라스틱 + 비닐 + 유리병)
 AI Hub의 유리병 데이터셋을 추가하여 학습했습니다.
 
 **10 Epochs 학습 결과:**  
 (train)  
-![Pasted image 20250807091922.png](images/Pasted%20image%2020250807091922.png) 
+![Pasted image 20250807091922.png](images/Pasted%20image%2020250807091922.png)  
 (valid)  
-![Pasted image 20250807091939.png](images/Pasted%20image%2020250807091939.png) 
+![Pasted image 20250807091939.png](images/Pasted%20image%2020250807091939.png)  
 (loss/mAP50 graph)  
-![Pasted image 20250807093050.png](images/Pasted%20image%2020250807093050.png) 
+![Pasted image 20250807093050.png](images/Pasted%20image%2020250807093050.png)  
 정확도가 99%에서 91%로 하락했습니다. 이는 유리병과 다른 클래스 간의 구별이 어렵기 때문으로 보이며, 유리병 데이터셋의 보강이 필요합니다.
 
 **100 Epochs 학습 결과:**  
 (train)  
-![Pasted image 20250807111825.png](images/Pasted%20image%2020250807111825.png) 
+![Pasted image 20250807111825.png](images/Pasted%20image%2020250807111825.png)  
 (valid)  
-![Pasted image 20250807111951.png](images/Pasted%20image%2020250807111951.png) 
+![Pasted image 20250807111951.png](images/Pasted%20image%2020250807111951.png)  
 (loss/mAP50 graph)  
-![Pasted image 20250807111913.png](images/Pasted%20image%2020250807111913.png) 
+![Pasted image 20250807111913.png](images/Pasted%20image%2020250807111913.png)  
 여전히 병에 대한 데이터가 부족한 것으로 판단됩니다.
 
 ## 💻 웹 애플리케이션 구현
