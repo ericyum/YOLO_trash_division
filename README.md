@@ -73,15 +73,16 @@ google-cli를 사용한 데이터 증강
 
 증강 결과  
 ![Pasted image 2020250806133237.png](images/Pasted%20image%2020250806133237.png) 
+![Pasted image 2020250806133249.png](images/Pasted%20image%2020250806133249.png) 
   
 **10 Epochs 학습 결과:**  
 (train)  
-![Pasted image 20250806113510.png](images/Pasted%20image%2020250806113510.png) 
+![Pasted image 20250806180749.png](images/Pasted%20image%2020250806180749.png) 
 (valid)  
-![Pasted image 20250806113619.png](images/Pasted%20image%2020250806113619.png) 
+![Pasted image 20250806134948.png](images/Pasted%20image%2020250806134948.png) 
 (loss/mAP50 graph)  
 ![Pasted image 20250806134506.png](images/Pasted%20image%2020250806134506.png) 
-`val/box_loss`와 `val/cls_loss`가 여전히 감소 추세를 보여 더 많은 Epochs가 필요함을 시사했습니다.
+`val/box_loss`와 `val/cls_loss`가 여전히 감소 추세를 보여 더 많은 Epochs가 필요함을 시사했습니다.  
 
 **100 Epochs 학습 결과:**
 (train)  
