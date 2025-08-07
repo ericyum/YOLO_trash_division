@@ -72,7 +72,7 @@ google-cli를 사용한 데이터 증강
 ![Pasted image 20250806113619.png](images/Pasted%20image%2020250806113619.png) 
 
 증강 결과  
-![Pasted image 20250806113619.png](images/Pasted%20image%20250806113619.png) 
+![Pasted image 2020250806133237.png](images/Pasted%20image%2020250806133237.png) 
   
 **10 Epochs 학습 결과:**  
 (train)  
