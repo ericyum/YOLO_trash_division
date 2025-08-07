@@ -77,7 +77,7 @@ google-cli를 사용한 데이터 증강
   
 **10 Epochs 학습 결과:**  
 (train)  
-![Pasted image 20250806180749.png](images/Pasted%20image%2020250806180749.png) 
+![Pasted image 20250804180749.png](images/Pasted%20image%2020250804180749.png) 
 (valid)  
 ![Pasted image 20250806134948.png](images/Pasted%20image%2020250806134948.png) 
 (loss/mAP50 graph)  
