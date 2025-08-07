@@ -1,1 +1,1 @@
-Initial commit of trash classification Flask app and README
+Add datasets folder and its content
