@@ -1,0 +1,21 @@
+
+{% extends "layout.html" %}
+{% block title %}기록 상세{% endblock %}
+{% block content %}
+<div class="history-detail-section">
+    <h1>기록 상세 보기</h1>
+
+    {% if record_type == 'upload' %}
+        <h2>이미지 업로드 기록</h2>
+        <img src="{{ url_for('static', filename='uploads/' + record.filename) }}" class="detail-image">
+        <p><strong>쓰레기 종류:</strong> {{ ', '.join(record.trash_types) }}</p>
+        <p><strong>처리 상태:</strong> {% if record.is_disposed %}올바르게 처리되었습니다.{% else %}올바르게 처리되지 않았습니다.{% endif %}</p>
+    {% elif record_type == 'webcam' %}
+        <h2>실시간 웹캠 분석 기록</h2>
+        <img src="data:image/jpeg;base64,{{ record.frame }}" class="detail-image">
+        <p><strong>감지된 객체:</strong> {{ ', '.join(record.labels) }}</p>
+    {% endif %}
+
+    <a href="{{ url_for('history') }}" class="back-button">목록으로 돌아가기</a>
+</div>
+{% endblock %}

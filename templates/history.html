@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block title %}이전 기록{% endblock %}
+{% block content %}
+<div class="history-section">
+    <h1>분석 기록</h1>
+
+    <h2>이미지 업로드 기록</h2>
+    <div class="history-grid">
+        {% for record in upload_history %}
+        <a href="{{ url_for('history_detail', record_type='upload', record_id=record.id) }}" class="history-item-link">
+            <div class="history-item">
+                <img src="{{ url_for('static', filename='uploads/' + record.filename) }}">
+                <p><strong>종류:</strong> {{ ', '.join(record.trash_types) }}</p>
+                <p><strong>처리:</strong> {% if record.is_disposed %}올바름{% else %}오류{% endif %}</p>
+            </div>
+        </a>
+        {% else %}
+        <p>업로드 기록이 없습니다.</p>
+        {% endfor %}
+    </div>
+    <div class="pagination">
+        {% if total_upload_pages > 1 %}
+            {% if upload_page > 1 %}
+                <a href="{{ url_for('history', upload_page=upload_page-1, webcam_page=webcam_page) }}">&laquo;</a>
+            {% endif %}
+            {% for page_num in range(1, total_upload_pages + 1) %}
+                <a href="{{ url_for('history', upload_page=page_num, webcam_page=webcam_page) }}" class="{% if page_num == upload_page %}active{% endif %}">{{ page_num }}</a>
+            {% endfor %}
+            {% if upload_page < total_upload_pages %}
+                <a href="{{ url_for('history', upload_page=upload_page+1, webcam_page=webcam_page) }}">&raquo;</a>
+            {% endif %}
+        {% endif %}
+    </div>
+
+    <h2>실시간 웹캠 분석 기록</h2>
+    <div class="history-grid">
+        {% for record in webcam_history %}
+        <a href="{{ url_for('history_detail', record_type='webcam', record_id=record.id) }}" class="history-item-link">
+            <div class="history-item">
+                <img src="data:image/jpeg;base64,{{ record.frame }}">
+                <p><strong>감지:</strong> {{ ', '.join(record.labels) }}</p>
+            </div>
+        </a>
+        {% else %}
+        <p>웹캠 분석 기록이 없습니다.</p>
+        {% endfor %}
+    </div>
+    <div class="pagination">
+        {% if total_webcam_pages > 1 %}
+            {% if webcam_page > 1 %}
+                <a href="{{ url_for('history', upload_page=upload_page, webcam_page=webcam_page-1) }}">&laquo;</a>
+            {% endif %}
+            {% for page_num in range(1, total_webcam_pages + 1) %}
+                <a href="{{ url_for('history', upload_page=upload_page, webcam_page=page_num) }}" class="{% if page_num == webcam_page %}active{% endif %}">{{ page_num }}</a>
+            {% endfor %}
+            {% if webcam_page < total_webcam_pages %}
+                <a href="{{ url_for('history', upload_page=upload_page, webcam_page=webcam_page+1) }}">&raquo;</a>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

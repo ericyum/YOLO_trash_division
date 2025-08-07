@@ -1,0 +1,32 @@
+
+{% extends "layout.html" %}
+{% block title %}홈{% endblock %}
+{% block content %}
+<div class="hero-section">
+    <h1>AI 기반 쓰레기 분리수거 솔루션</h1>
+    <p>최첨단 AI 기술을 활용하여 쓰레기 이미지를 분석하고, 올바른 분리수거 방법을 안내합니다.</p>
+    <a href="{{ url_for('upload') }}" class="cta-button">지금 시작하기</a>
+</div>
+
+<div class="features-section">
+    <h2>주요 기능</h2>
+    <div class="features-grid">
+        <div class="feature-item">
+            <h3>이미지 분석</h3>
+            <p>업로드된 쓰레기 이미지를 AI가 분석하여 종류를 정확하게 판별합니다.</p>
+        </div>
+        <div class="feature-item">
+            <h3>실시간 웹캠 분석</h3>
+            <p>웹캠을 통해 실시간으로 쓰레기를 비추면, AI가 즉시 종류를 알려줍니다.</p>
+        </div>
+        <div class="feature-item">
+            <h3>처리 상태 확인</h3>
+            <p>분석된 쓰레기가 올바르게 처리되었는지 여부를 함께 알려주어, 환경 보호에 기여합니다.</p>
+        </div>
+        <div class="feature-item">
+            <h3>분석 기록 조회</h3>
+            <p>이전에 분석했던 쓰레기 이미지와 결과를 다시 확인하고 관리할 수 있습니다.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

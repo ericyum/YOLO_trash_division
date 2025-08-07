@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %} - 쓰레기 분리수거 도우미</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <a href="/" class="logo">쓰레기 분리수거 도우미</a>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="{{ url_for('home') }}">홈</a></li>
+                    <li><a href="{{ url_for('upload') }}">이미지 업로드</a></li>
+                    <li><a href="{{ url_for('webcam') }}">실시간 웹캠 분석</a></li>
+                    <li><a href="{{ url_for('history') }}">이전 기록</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="inner">
+            <p>&copy; 2025 쓰레기 분리수거 도우미. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

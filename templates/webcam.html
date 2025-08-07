@@ -1,0 +1,10 @@
+
+{% extends "layout.html" %}
+{% block title %}실시간 웹캠 분석{% endblock %}
+{% block content %}
+<div class="webcam-section">
+    <h1>실시간 웹캠 분석</h1>
+    <img src="{{ url_for('video_feed') }}" width="100%">
+    <a href="{{ url_for('home') }}">돌아가기</a>
+</div>
+{% endblock %}

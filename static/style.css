@@ -1,0 +1,243 @@
+
+/* General Styles */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Malgun Gothic', 'Nanum Gothic', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #005aab;
+}
+
+header .gnb {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header .gnb li {
+    margin-left: 40px;
+}
+
+header .gnb li a {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Main Container */
+.container {
+    flex-grow: 1;
+    padding: 40px 0;
+}
+
+/* Home Page */
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #005aab;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #005aab;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #f0f5fa;
+}
+
+.features-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.feature-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Upload, Webcam, History Pages */
+.upload-section, .webcam-section, .history-section, .history-detail-section {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* History Page */
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.history-item-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.history-item {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.history-item:hover {
+    transform: translateY(-5px);
+}
+
+.history-item img {
+    width: 100%;
+    height: 150px; /* 고정 높이 */
+    object-fit: cover; /* 이미지 비율 유지하며 채우기 */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a, .pagination span {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #005aab;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #f0f5fa;
+}
+
+.pagination span {
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.pagination a.active {
+    background-color: #005aab;
+    color: white;
+    border-color: #005aab;
+}
+
+/* History Detail Page */
+.result img {
+    max-width: 400px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* History Detail Page */
+.detail-image {
+    max-width: 600px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
