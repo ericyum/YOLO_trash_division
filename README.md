@@ -170,16 +170,17 @@ AI Hub의 유리병 데이터셋을 추가하여 학습 하였으며, 비닐 데
 ### 프롬프트  
 이전에 작성했던 ToDoList를 바탕으로 작성했습니다.  
   
--   ![Pasted image 20250807093641.png](images/Pasted%20image%2020250807093641.png)    
--   ![Pasted image 20250807102015.png](images/Pasted%20image%2020250807102015.png)
+![Pasted image 20250807093641.png](images/Pasted%20image%2020250807093641.png)  
+
+![Pasted image 20250807102015.png](images/Pasted%20image%2020250807102015.png)  
   
 ### 구현 화면  
   
--   ![Pasted image 20250807163559.png](images/Pasted%20image%2020250807163559.png)  
+![Pasted image 20250807163559.png](images/Pasted%20image%2020250807163559.png)  
   
--   ![Pasted image 20250807163647.png](images/Pasted%20image%2020250807163647.png)  
+![Pasted image 20250807163647.png](images/Pasted%20image%2020250807163647.png)  
   
--   ![Pasted image 20250807163705.png](images/Pasted%20image%2020250807163705.png)  
+![Pasted image 20250807163705.png](images/Pasted%20image%2020250807163705.png)  
   
 ## 🔗 참고 자료  
   
