@@ -13,7 +13,7 @@ from collections import namedtuple
 app = Flask(__name__)
 
 # YOLOv11 모델 로드
-model = YOLO('C:/Users/SBA/github/YOLO_trash_division/result/train_result/small_model/weights/best.pt')
+model = YOLO('C:/Users/SBA/github/YOLO_trash_division/result/train_result/nano_model/weights/best.pt')
 
 # 업로드 폴더 설정
 UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static/uploads')

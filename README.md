@@ -155,8 +155,11 @@ Roboflow의 `페트병` 데이터셋과 `비닐` 데이터 셋, 그리고 AI Hub
 그리고 기존의 플라스틱과 비닐에 대한 지표들의 경우우 크게 변화가 없었으나, 10 Epochs `이물질이 묻은 플라스틱`의 정확도가 99%에서 91%로 하락하는 변화가 있었습니다.
   
 ### 통합 학습 2(플라스틱 + 비닐 + 유리병(데이터 추가))
-유리병 데이터셋에 부족한 부분을 추가, 학습하여 어떤 영향을 미치는 지를 관찰 했습니다.
-
+유리병 데이터셋에 부족한 부분을 추가, 학습하여 어떤 영향을 미치는 지를 관찰 했습니다.  
+학습 시에, **nano모델**과 **small모델**을 사용하여 두 모델를 사용 했을 때의 차이점 또한 관찰 했습니다.  
+  
+**1. nano모델을 사용했을 경우**
+  
 **10 Epochs 학습 결과:**  
 (train)  
 ![result_train_10epoch.png](images/result_train_10epoch.png)  
@@ -173,9 +176,28 @@ Roboflow의 `페트병` 데이터셋과 `비닐` 데이터 셋, 그리고 AI Hub
 (loss/mAP50 graph)  
 ![result_50epoch_loss.png](images/result_50epoch_loss.png)  
   
-유리병 데이터를 추가하여 학습한 결과 유리병의 정확도는 높아졌지만 플라스틱 클래스들의 전반적인 정확도는 내려가는 경향을 보였습니다.  
-그 반면에 비닐 클래스들의 데이터는 여전히 98%의 높은 정확도를 보였습니다.  
-
+**120 Epochs 학습 결과:**  
+(valid)  
+![valid(n)_120epoch.png](images/valid(n)_120epoch.png)  
+(loss/mAP50 graph)  
+![nano_120epoch_results.png](images/nano_120epoch_results.png)  
+  
+**2. small모델을 사용했을 경우**  
+  
+**120 Epochs 학습 결과:**  
+(train)  
+![train(s)_120epoch.png](images/train(s)_120epoch.png)  
+(valid)  
+![valid(s)_120epoch.png](images/valid(s)_120epoch.png)  
+(loss/mAP50 graph)  
+![small_120epoch_results.png](images/small_120epoch_results.png)  
+    
+1. small모델 보다는 nano모델로 학습한 것이 정확성에 있어서 조금 더 높은 경향을 띄는 것으로 확인 되었습니다.  
+      
+2. 각 클래스의 정확도를 세부적으로 따저보면, 유리병 데이터를 추가하여 학습한 결과 유리병의 정확도는 높아졌지만 플라스틱 클래스들의 전반적인 정확도는 내려가는 경향을 보였습니다.  
+  
+3. 그 반면에 비닐 클래스들의 데이터는 여전히 98%의 높은 정확도를 보였습니다.  
+  
 ### 왜 플라스틱의 정확도는 비닐과는 다르게 유리병을 추가 했을 때 변화가 있었을까?  
   
 비닐은 플라스틱의 형태와 확연히 다른 형태를 가지고 있습니다. 따라서 적당한 양의 학습만으로도 구분을 충분히 할 수 있었으나,    
