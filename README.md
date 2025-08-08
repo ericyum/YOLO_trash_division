@@ -172,9 +172,19 @@ Roboflow의 `페트병` 데이터셋과 `비닐` 데이터 셋, 그리고 AI Hub
 ![result_valid_50epoch.png](images/result_valid_50epoch.png)  
 (loss/mAP50 graph)  
 ![result_50epoch_loss.png](images/result_50epoch_loss.png)  
-  
+ 
 유리병 데이터를 추가하여 학습한 결과 유리병의 정확도는 높아졌지만 플라스틱 클래스들의 전반적인 정확도는 내려가는 경향을 보였습니다.  
 그 반면에 비닐 클래스들의 데이터는 여전히 98%의 높은 정확도를 보였습니다.  
+
+**120 Epochs, Small model 학습 결과:**  
+(train)  
+![train 이미지](images/result_train_50epoch.png)  
+(valid)  
+![valid 이미지](images/result_valid_50epoch.png)  
+(loss/mAP50 graph)  
+![result 이미지](images/result_50epoch_loss.png)
+
+small 모델로 변경하여 학습한 결과 nano모델에서보다 정확도가 높아졌습니다. nano 모델에서 학습할때보다 높은 정확도를 나타내는 것을 확인했습니다.
 
 ### 왜 플라스틱의 정확도는 비닐과는 다르게 유리병을 추가 했을 때 변화가 있었을까?  
   
