@@ -25,6 +25,10 @@
             <p style="color: green;"><strong>처리 상태:</strong> 올바르게 처리되었습니다.</p>
         {% else %}
             <p style="color: red;"><strong>처리 상태:</strong> 올바르게 처리되지 않았습니다.</p>
+            <p><strong>분리수거 가이드:</strong> <a href="{{ guide_url }}" target="_blank">올바른 분리수거 방법 확인하기</a></p>
+            {% if guide_html %}
+                <div class="guide-html">{{ guide_html|safe }}</div>
+            {% endif %}
         {% endif %}
     </div>
     {% endif %}
