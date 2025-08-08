@@ -127,7 +127,7 @@ Ai hub의 데이터셋을 이용했는데, 크기가 방대해서 데이터의 �
 
 **10 Epochs 학습 결과:**
 (train)  
-![glass_train(10).png](glass_train(10).png)  
+![glass_train(10).png](images/glass_train(10).png)  
 (valid)  
 ![glass_valid(10).png](images/glass_valid(10).png)  
 (loss/mAP50 graph)  
