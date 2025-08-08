@@ -119,7 +119,7 @@ Ai hub의 데이터셋을 이용했는데, 크기가 방대해서 데이터의 �
 
 **10 Epochs 학습 결과:**  
 (train)  
-![glass_train(1).png](images/glass_train(1).png)
+![glass_train (1).png](images/glass_train(1).png)
 
 모델 학습 후 결과를 확인하는 과정에서 broken_bottle의 데이터가 상대적으로 부족해 정확도가 상당히 떨어지는걸 확인할 수 있었습니다.
 
@@ -131,7 +131,7 @@ Ai hub의 데이터셋을 이용했는데, 크기가 방대해서 데이터의 �
 (valid)  
 ![glass_valid(10).png](images/glass_valid(10).png)  
 (loss/mAP50 graph)  
-![glass_results(10).png](images/glass_results(10).png)  
+![glass_results(10).png](images/glass_results (10).png)  
 
 **100 Epochs 학습 결과:**  
 (train)  
