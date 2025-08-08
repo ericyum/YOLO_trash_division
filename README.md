@@ -111,6 +111,39 @@ Roboflow의 `페트병` 데이터셋과 `비닐` 데이터 셋, 그리고 AI Hub
 100 Epochs로 늘린 결과 정확도가 더 늘어난 것을 확인할 수 있었습니다.
 추가로 `val/cls_loss`는 충분히 개선이 되었지만 `val/box_loss`는 여전히 개선의 여지가 있음을 알 수 있었습니다.  
 
+### 유리병(Glass_bottle) 클래스 학습   
+
+Ai hub의 데이터셋을 이용했는데, 크기가 방대해서 데이터의 갯수를 다른 클래스의 데이터셋의 양을 맞추기 위해 데이터를 덜어냈는데,
+이 과정에서 유리병의 하위 클래스의 갯수가 고르지 않다는 것을 확인했습니다. 이후 로보플로와 검색 데이터를 이용해 추가, 증강하여
+부족한 데이터를 보강한 뒤 다시 학습 했습니다.
+
+**10 Epochs 학습 결과:**  
+(train)  
+![glass_train(1).png](images/Pasted%20image%2020250804180749.png)
+
+모델 학습 후 결과를 확인하는 과정에서 broken_bottle의 데이터가 상대적으로 부족해 정확도가 상당히 떨어지는걸 확인할 수 있었습니다.
+
+**데이터 보강 후 학습 결과:**
+
+**10 Epochs 학습 결과:**
+(train)  
+![glass_train(10).png](glass_train(10).png)  
+(valid)  
+![glass_valid(10).png](images/glass_valid(10).png)  
+(loss/mAP50 graph)  
+![glass_results(10).png](images/glass_results(10).png)  
+
+**100 Epochs 학습 결과:**  
+(train)  
+![glass_train(100).png](images/glass_train(100).png)  
+(valid)  
+![glass_valid(100).png](images/glass_valid(100).png)  
+(loss/mAP50 graph)  
+![glass_results(100).png](images/glass_results(100).png)  
+  
+100 Epochs로 늘린 결과 정확도가 더 늘어난 것을 확인할 수 있었습니다.
+추가로 `val/cls_loss`는 충분히 개선이 되었지만 `val/box_loss`는 여전히 개선의 여지가 있음을 알 수 있었습니다.
+
 ### 통합 학습 (플라스틱 + 비닐)  
 플라스틱과 비닐 클래스를 통합하여 학습을 진행했습니다. 또한 통합을 할 때 서로가 서로에게 얼마나 영향을 미치는지를 mAP50 수치를 중심으로 관찰 했습니다.  
 
