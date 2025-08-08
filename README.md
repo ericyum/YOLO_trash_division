@@ -197,13 +197,15 @@ Roboflow의 `페트병` 데이터셋과 `비닐` 데이터 셋, 그리고 AI Hub
 
 ![Pasted image 20250807102015.png](images/Pasted%20image%2020250807102015.png)  
   
+![Pasted image 20250808102711.png](images/Pasted%20image%2020250808102711.png)  
+  
 ### 구현 화면  
   
 ![Pasted image 20250807163559.png](images/Pasted%20image%2020250807163559.png)  
   
-![Pasted image 20250807163647.png](images/Pasted%20image%2020250807163647.png)  
+![Pasted image 20250808111738.png](images/Pasted%20image%2020250808111738.png)  
   
-![Pasted image 20250807163705.png](images/Pasted%20image%2020250807163705.png)  
+![Pasted image 20250808112058.png](images/Pasted%20image%2020250808112058.png)  
   
 ## 🔗 참고 자료  
   
