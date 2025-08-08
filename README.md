@@ -160,6 +160,25 @@ AI Hub의 유리병 데이터셋을 추가하여 학습 하였으며, 비닐 데
   
 따라서, 여기에서 더 개선을 하고자 한다면 유리병 데이터셋을 보강하고 이를 바탕으로 보다 더 세밀하게 구분할 수 있도록 학습 시키는 것이 필요하다고 생각됩니다.  
   
+### 통합 학습 2(플라스틱 + 비닐 + 유리병(데이터 추가))
+유리병 데이터셋에 부족한 부분을 추가, 학습하여 어떤 영향을 미치는 지를 관찰 했습니다.
+
+**10 Epochs 학습 결과:**  
+(train)  
+![result_train_10epoch.png](images/result_train_10epoch.png)  
+(valid)  
+![result_valid_10epoch.png](images/result_valid_10epoch.png)  
+(loss/mAP50 graph)  
+![result_10epoch_loss.png](images/result_10epoch_loss.png)  
+  
+**50 Epochs 학습 결과:**  
+(train)  
+![result_train_50epoch.png](images/result_train_50epoch.png)  
+(valid)  
+![result_valid_50epoch.png](images/result_valid_50epoch.png)  
+(loss/mAP50 graph)  
+![result_50epoch_loss.png](images/result_50epoch_loss.png)  
+  
 ## 💻 웹 애플리케이션 구현  
   
 학습된 `best.pt` 모델을 활용하여, google-cli를 통해 Flask 기반의 쓰레기 분리수거 웹 애플리케이션을 개발했습니다. 주요 기능은 다음과 같습니다:
